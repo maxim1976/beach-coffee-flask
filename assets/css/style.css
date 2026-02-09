@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&family=Raleway:wght@300&family=Ma+Shan+Zheng&display=swap');
+
+/* Ma Shan Zheng for all Chinese characters */
+* {
+    font-family: 'Ma Shan Zheng', 'Josefin Slab', 'Raleway', sans-serif;
+}
 
 * {
     padding: 0;
