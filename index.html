@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wave 咖啡</title>
+    <title data-en="Wave Coffee" data-zh="Wave 咖啡">Wave 咖啡</title>
     <link rel="icon" type="image/x-icon" href="assets/images/fav.png">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
@@ -27,21 +27,28 @@
                     <div class="row">
                         <div class="col-md-6">
                             <a id="home-button" class="menu" href="#home"><i class="fal fa-mug-marshmallows"></i>
-                                飲品菜單</a>
+                                <span data-en="Menu" data-zh="飲品菜單">飲品菜單</span></a>
                         </div>
                         <div class="col-md-6">
                             <a id="special-button" class="menu" href="#special-item"><i class="fad fa-sparkles"></i>
-                                特色推薦</a>
+                                <span data-en="Specials" data-zh="特色推薦">特色推薦</span></a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <a id="about-button" class="menu" href="#about-us"><i class="fal fa-user-friends"></i>
-                                關於我們</a>
+                                <span data-en="About Us" data-zh="關於我們">關於我們</span></a>
                         </div>
                         <div class="col-md-6">
                             <a id="contact-button" class="menu" href="#contact-us"><i class="fal fa-house-user"></i>
-                                聯絡我們</a>
+                                <span data-en="Contact" data-zh="聯絡我們">聯絡我們</span></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a id="lang-toggle" class="menu lang-toggle" href="javascript:void(0)">
+                                <i class="fal fa-globe"></i> <span>English</span>
+                            </a>
                         </div>
                     </div>
 
@@ -49,7 +56,7 @@
                         <div class="row">
                             <div class="col-md-12 hidden-xs hidden-sm">
                                 <div class="footer-text josefin">
-                                    <p>Wave 咖啡 &#169;<span id="currentYear"></span></p>
+                                    <p><span data-en="Wave Coffee" data-zh="Wave 咖啡">Wave 咖啡</span> &#169;<span id="currentYear"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -60,117 +67,121 @@
                 <div style="overflow-x: hidden;" id="home" class="content-box full-height example">
                     <div class="tab-buttons margin-bottom">
                         <ul class="nav nav-tabs nav-justified josefin">
-                            <li class="active"><a data-toggle="tab" href="#home">冰咖啡</a></li>
-                            <li><a data-toggle="tab" href="#menu1">熱咖啡</a></li>
-                            <li><a data-toggle="tab" href="#menu2">果汁</a></li>
+                            <li class="active"><a data-toggle="tab" href="#home"><span data-en="Iced Coffee" data-zh="冰咖啡">冰咖啡</span></a></li>
+                            <li><a data-toggle="tab" href="#menu1"><span data-en="Hot Coffee" data-zh="熱咖啡">熱咖啡</span></a></li>
+                            <li><a data-toggle="tab" href="#menu2"><span data-en="Juice" data-zh="果汁">果汁</span></a></li>
                         </ul>
                     </div>
 
                     <div class="tab-content">
                         <div id="home" class="tab-pane fade in active">
+                            <!-- Iced Americano -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/iced-americano.png" alt="冰美式咖啡">
+                                            <img src="assets/images/iced-americano.png" data-alt-en="Iced Americano" data-alt-zh="冰美式咖啡" alt="冰美式咖啡">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">冰美式咖啡</h2>
+                                                    <h2 class="font-18" data-en="Iced Americano" data-zh="冰美式咖啡">冰美式咖啡</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$80</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>冰鎮美式，口感清爽，適合炎熱天氣享用。</p>
+                                                <p data-en="Refreshing iced Americano, perfect for hot weather." data-zh="冰鎮美式，口感清爽，適合炎熱天氣享用。">冰鎮美式，口感清爽，適合炎熱天氣享用。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Iced Cappuccino -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/iced-cappuccino.png" alt="冰卡布奇諾">
+                                            <img src="assets/images/iced-cappuccino.png" data-alt-en="Iced Cappuccino" data-alt-zh="冰卡布奇諾" alt="冰卡布奇諾">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">冰卡布奇諾</h2>
+                                                    <h2 class="font-18" data-en="Iced Cappuccino" data-zh="冰卡布奇諾">冰卡布奇諾</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$90</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>濃郁奶泡搭配冰鎮咖啡，層次豐富。</p>
+                                                <p data-en="Rich foam paired with iced coffee, layered flavors." data-zh="濃郁奶泡搭配冰鎮咖啡，層次豐富。">濃郁奶泡搭配冰鎮咖啡，層次豐富。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Iced Espresso -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/iced-espresso.png" alt="冰濃縮咖啡">
+                                            <img src="assets/images/iced-espresso.png" data-alt-en="Iced Espresso" data-alt-zh="冰濃縮咖啡" alt="冰濃縮咖啡">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">冰濃縮咖啡</h2>
+                                                    <h2 class="font-18" data-en="Iced Espresso" data-zh="冰濃縮咖啡">冰濃縮咖啡</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$70</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>純正濃縮咖啡，冰鎮後更顯醇厚風味。</p>
+                                                <p data-en="Pure espresso on ice, bold and rich flavor." data-zh="純正濃縮咖啡，冰鎮後更顯醇厚風味。">純正濃縮咖啡，冰鎮後更顯醇厚風味。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Iced Latte -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/iced-latte.png" alt="冰拿鐵">
+                                            <img src="assets/images/iced-latte.png" data-alt-en="Iced Latte" data-alt-zh="冰拿鐵" alt="冰拿鐵">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">冰拿鐵</h2>
+                                                    <h2 class="font-18" data-en="Iced Latte" data-zh="冰拿鐵">冰拿鐵</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$90</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>香醇牛奶與冰咖啡的完美結合。</p>
+                                                <p data-en="A perfect blend of smooth milk and iced coffee." data-zh="香醇牛奶與冰咖啡的完美結合。">香醇牛奶與冰咖啡的完美結合。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -178,109 +189,113 @@
                             </div>
                         </div>
                         <div id="menu1" class="tab-pane fade">
+                            <!-- Hot Americano -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/hot-americano.png" alt="熱美式咖啡">
+                                            <img src="assets/images/hot-americano.png" data-alt-en="Hot Americano" data-alt-zh="熱美式咖啡" alt="熱美式咖啡">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">熱美式咖啡</h2>
+                                                    <h2 class="font-18" data-en="Hot Americano" data-zh="熱美式咖啡">熱美式咖啡</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$70</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>經典美式，純粹的咖啡風味。</p>
+                                                <p data-en="Classic Americano, pure coffee flavor." data-zh="經典美式，純粹的咖啡風味。">經典美式，純粹的咖啡風味。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Hot Cappuccino -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/hot-cappuccino.png" alt="熱卡布奇諾">
+                                            <img src="assets/images/hot-cappuccino.png" data-alt-en="Hot Cappuccino" data-alt-zh="熱卡布奇諾" alt="熱卡布奇諾">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">熱卡布奇諾</h2>
+                                                    <h2 class="font-18" data-en="Hot Cappuccino" data-zh="熱卡布奇諾">熱卡布奇諾</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$85</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>細緻奶泡與濃郁咖啡的經典組合。</p>
+                                                <p data-en="Delicate foam with rich coffee, a classic combo." data-zh="細緻奶泡與濃郁咖啡的經典組合。">細緻奶泡與濃郁咖啡的經典組合。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Hot Espresso -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/hot-espresso.png" alt="熱濃縮咖啡">
+                                            <img src="assets/images/hot-espresso.png" data-alt-en="Hot Espresso" data-alt-zh="熱濃縮咖啡" alt="熱濃縮咖啡">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">熱濃縮咖啡</h2>
+                                                    <h2 class="font-18" data-en="Hot Espresso" data-zh="熱濃縮咖啡">熱濃縮咖啡</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$60</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>小杯濃縮，感受最純粹的咖啡香氣。</p>
+                                                <p data-en="A small cup of espresso, the purest coffee aroma." data-zh="小杯濃縮，感受最純粹的咖啡香氣。">小杯濃縮，感受最純粹的咖啡香氣。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Hot Latte -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/hot-latte.png" alt="熱拿鐵">
+                                            <img src="assets/images/hot-latte.png" data-alt-en="Hot Latte" data-alt-zh="熱拿鐵" alt="熱拿鐵">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">熱拿鐵</h2>
+                                                    <h2 class="font-18" data-en="Hot Latte" data-zh="熱拿鐵">熱拿鐵</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$85</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>溫潤牛奶與香醇咖啡的溫暖搭配。</p>
+                                                <p data-en="Warm milk and aromatic coffee, a cozy pairing." data-zh="溫潤牛奶與香醇咖啡的溫暖搭配。">溫潤牛奶與香醇咖啡的溫暖搭配。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -288,109 +303,113 @@
                             </div>
                         </div>
                         <div id="menu2" class="tab-pane fade">
+                            <!-- Strawberry Smoothie -->
                             <div class="coffee-menu-single josefin border">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/smoothie-1.png" alt="草莓冰沙">
+                                            <img src="assets/images/smoothie-1.png" data-alt-en="Strawberry Smoothie" data-alt-zh="草莓冰沙" alt="草莓冰沙">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">草莓冰沙</h2>
+                                                    <h2 class="font-18" data-en="Strawberry Smoothie" data-zh="草莓冰沙">草莓冰沙</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$100</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>新鮮草莓現打，酸甜可口。</p>
+                                                <p data-en="Freshly blended strawberries, sweet and tangy." data-zh="新鮮草莓現打，酸甜可口。">新鮮草莓現打，酸甜可口。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Mixed Berry Smoothie -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/smoothie-2.png" alt="綜合莓果冰沙">
+                                            <img src="assets/images/smoothie-2.png" data-alt-en="Mixed Berry Smoothie" data-alt-zh="綜合莓果冰沙" alt="綜合莓果冰沙">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">綜合莓果冰沙</h2>
+                                                    <h2 class="font-18" data-en="Mixed Berry Smoothie" data-zh="綜合莓果冰沙">綜合莓果冰沙</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$100</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>多種莓果混合，富含維他命。</p>
+                                                <p data-en="A blend of mixed berries, rich in vitamins." data-zh="多種莓果混合，富含維他命。">多種莓果混合，富含維他命。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Pineapple Smoothie -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/smoothie-3.png" alt="鳳梨冰沙">
+                                            <img src="assets/images/smoothie-3.png" data-alt-en="Pineapple Smoothie" data-alt-zh="鳳梨冰沙" alt="鳳梨冰沙">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">鳳梨冰沙</h2>
+                                                    <h2 class="font-18" data-en="Pineapple Smoothie" data-zh="鳳梨冰沙">鳳梨冰沙</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$95</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>花蓮在地鳳梨，香甜清爽。</p>
+                                                <p data-en="Local Hualien pineapple, sweet and refreshing." data-zh="花蓮在地鳳梨，香甜清爽。">花蓮在地鳳梨，香甜清爽。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Spinach Green Latte -->
                             <div class="coffee-menu-single josefin">
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 col-xs-12">
                                         <div class="menu-img">
-                                            <img src="assets/images/smoothie-4.png" alt="菠菜綠拿鐵">
+                                            <img src="assets/images/smoothie-4.png" data-alt-en="Spinach Green Latte" data-alt-zh="菠菜綠拿鐵" alt="菠菜綠拿鐵">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-sm-6 col-xs-12">
                                         <div class="menu-description">
                                             <div class="menu-heading-price josefin">
                                                 <div class="menu-heading">
-                                                    <h2 class="font-18">菠菜綠拿鐵</h2>
+                                                    <h2 class="font-18" data-en="Spinach Green Latte" data-zh="菠菜綠拿鐵">菠菜綠拿鐵</h2>
                                                 </div>
                                                 <div class="menu-price">
                                                     <h2>NT$95</h2>
                                                 </div>
                                             </div>
                                             <div class="menu-text raleway">
-                                                <p>菠菜搭配蘋果，營養健康好選擇。</p>
+                                                <p data-en="Spinach with apple, a nutritious and healthy choice." data-zh="菠菜搭配蘋果，營養健康好選擇。">菠菜搭配蘋果，營養健康好選擇。</p>
                                             </div>
                                             <div class="order-button josefin">
-                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> 立即點餐</a>
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -404,46 +423,22 @@
                         <div class="col-md-6">
                             <div class="special-item-single">
                                 <div class="special-item-image">
-                                    <img src="assets/images/special-01.jpg" alt="主廚特調">
+                                    <img src="assets/images/special-01.jpg" data-alt-en="Chef's Special" data-alt-zh="主廚特調" alt="主廚特調">
                                 </div>
                                 <div class="special-item-desc">
-                                    <h2 class="josefin">主廚特調</h2>
-                                    <p class="raleway">主廚精心調配的獨家飲品，每日限量供應，錯過不再。</p>
+                                    <h2 class="josefin" data-en="Chef's Special" data-zh="主廚特調">主廚特調</h2>
+                                    <p class="raleway" data-en="An exclusive drink crafted by our chef, limited daily — don't miss out." data-zh="主廚精心調配的獨家飲品，每日限量供應，錯過不再。">主廚精心調配的獨家飲品，每日限量供應，錯過不再。</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="special-item-single">
                                 <div class="special-item-image">
-                                    <img src="assets/images/special-02.jpg" alt="季節限定">
+                                    <img src="assets/images/special-02.jpg" data-alt-en="Seasonal Limited" data-alt-zh="季節限定" alt="季節限定">
                                 </div>
                                 <div class="special-item-desc">
-                                    <h2 class="josefin">季節限定</h2>
-                                    <p class="raleway">依照時令食材製作，品嚐當季最鮮美的滋味。</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="special-item-single">
-                                <div class="special-item-image">
-                                    <img src="assets/images/special-03.jpg" alt="花蓮特選">
-                                </div>
-                                <div class="special-item-desc">
-                                    <h2 class="josefin">花蓮特選</h2>
-                                    <p class="raleway">選用花蓮在地優質食材，呈現道地風味。</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="special-item-single">
-                                <div class="special-item-image">
-                                    <img src="assets/images/special-04.jpg" alt="手作甜點">
-                                </div>
-                                <div class="special-item-desc">
-                                    <h2 class="josefin">手作甜點</h2>
-                                    <p class="raleway">每日新鮮手作，搭配咖啡最對味。</p>
+                                    <h2 class="josefin" data-en="Seasonal Limited" data-zh="季節限定">季節限定</h2>
+                                    <p class="raleway" data-en="Made with seasonal ingredients, taste the freshest flavors of the season." data-zh="依照時令食材製作，品嚐當季最鮮美的滋味。">依照時令食材製作，品嚐當季最鮮美的滋味。</p>
                                 </div>
                             </div>
                         </div>
@@ -452,22 +447,46 @@
                         <div class="col-md-6">
                             <div class="special-item-single">
                                 <div class="special-item-image">
-                                    <img src="assets/images/special-05.jpg" alt="在地風味">
+                                    <img src="assets/images/special-03.jpg" data-alt-en="Hualien Selection" data-alt-zh="花蓮特選" alt="花蓮特選">
                                 </div>
                                 <div class="special-item-desc">
-                                    <h2 class="josefin">在地風味</h2>
-                                    <p class="raleway">結合花蓮特色，創造獨一無二的味覺體驗。</p>
+                                    <h2 class="josefin" data-en="Hualien Selection" data-zh="花蓮特選">花蓮特選</h2>
+                                    <p class="raleway" data-en="Premium local Hualien ingredients, authentic local flavors." data-zh="選用花蓮在地優質食材，呈現道地風味。">選用花蓮在地優質食材，呈現道地風味。</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="special-item-single">
                                 <div class="special-item-image">
-                                    <img src="assets/images/special-06.jpg" alt="經典組合">
+                                    <img src="assets/images/special-04.jpg" data-alt-en="Handmade Desserts" data-alt-zh="手作甜點" alt="手作甜點">
                                 </div>
                                 <div class="special-item-desc">
-                                    <h2 class="josefin">經典組合</h2>
-                                    <p class="raleway">人氣飲品搭配精選點心，超值享受。</p>
+                                    <h2 class="josefin" data-en="Handmade Desserts" data-zh="手作甜點">手作甜點</h2>
+                                    <p class="raleway" data-en="Freshly handmade daily, the perfect pairing with coffee." data-zh="每日新鮮手作，搭配咖啡最對味。">每日新鮮手作，搭配咖啡最對味。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="special-item-single">
+                                <div class="special-item-image">
+                                    <img src="assets/images/special-05.jpg" data-alt-en="Local Flavors" data-alt-zh="在地風味" alt="在地風味">
+                                </div>
+                                <div class="special-item-desc">
+                                    <h2 class="josefin" data-en="Local Flavors" data-zh="在地風味">在地風味</h2>
+                                    <p class="raleway" data-en="Combining Hualien's unique character to create a one-of-a-kind taste experience." data-zh="結合花蓮特色，創造獨一無二的味覺體驗。">結合花蓮特色，創造獨一無二的味覺體驗。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="special-item-single">
+                                <div class="special-item-image">
+                                    <img src="assets/images/special-06.jpg" data-alt-en="Classic Combo" data-alt-zh="經典組合" alt="經典組合">
+                                </div>
+                                <div class="special-item-desc">
+                                    <h2 class="josefin" data-en="Classic Combo" data-zh="經典組合">經典組合</h2>
+                                    <p class="raleway" data-en="Popular drinks paired with selected pastries, great value." data-zh="人氣飲品搭配精選點心，超值享受。">人氣飲品搭配精選點心，超值享受。</p>
                                 </div>
                             </div>
                         </div>
@@ -478,7 +497,7 @@
                         <div class="col-md-12">
                             <div class="about-us-box">
                                 <div class="about-us-heading josefin">
-                                    <h2>關於 Wave 咖啡</h2>
+                                    <h2 data-en="About Wave Coffee" data-zh="關於 Wave 咖啡">關於 Wave 咖啡</h2>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
@@ -487,14 +506,14 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8 raleway">
-                                        <p>Wave 咖啡位於花蓮市中心，是一間以精品咖啡為主的溫馨咖啡廳。我們堅持選用優質咖啡豆，由專業咖啡師為您手工沖泡每一杯。店內空間舒適寧靜，是您放鬆身心、享受咖啡時光的最佳去處。無論是與朋友聚會、獨自閱讀，還是需要一個安靜的工作空間，Wave 咖啡都歡迎您的到來。
+                                        <p data-en="Wave Coffee is located in the heart of Hualien City, a cozy cafe specializing in specialty coffee. We insist on selecting premium coffee beans, with professional baristas hand-brewing every cup for you. Our space is comfortable and serene — the perfect place to relax and enjoy your coffee time. Whether meeting with friends, reading alone, or needing a quiet workspace, Wave Coffee welcomes you." data-zh="Wave 咖啡位於花蓮市中心，是一間以精品咖啡為主的溫馨咖啡廳。我們堅持選用優質咖啡豆，由專業咖啡師為您手工沖泡每一杯。店內空間舒適寧靜，是您放鬆身心、享受咖啡時光的最佳去處。無論是與朋友聚會、獨自閱讀，還是需要一個安靜的工作空間，Wave 咖啡都歡迎您的到來。">Wave 咖啡位於花蓮市中心，是一間以精品咖啡為主的溫馨咖啡廳。我們堅持選用優質咖啡豆，由專業咖啡師為您手工沖泡每一杯。店內空間舒適寧靜，是您放鬆身心、享受咖啡時光的最佳去處。無論是與朋友聚會、獨自閱讀，還是需要一個安靜的工作空間，Wave 咖啡都歡迎您的到來。
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="about-us-box">
                                 <div class="about-us-heading josefin">
-                                    <h2>我們的故事</h2>
+                                    <h2 data-en="Our Story" data-zh="我們的故事">我們的故事</h2>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 visible-xs-block">
@@ -503,7 +522,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8 raleway">
-                                        <p>Wave 咖啡創立於花蓮，源自對咖啡的熱愛與對這片土地的深情。創辦人在環遊世界品嚐各地咖啡後，決定回到家鄉花蓮，將世界級的咖啡體驗帶給在地居民與旅客。我們的名字「Wave」象徵著太平洋的海浪，也代表著我們希望為花蓮帶來一股新的咖啡浪潮。從開店至今，我們始終堅持品質與服務，用心對待每一位客人。
+                                        <p data-en="Wave Coffee was founded in Hualien, born from a love of coffee and a deep connection to this land. After traveling the world tasting coffee from every corner, our founder decided to return home to Hualien and bring a world-class coffee experience to local residents and travelers. Our name 'Wave' symbolizes the Pacific Ocean waves, and represents our hope to bring a new wave of coffee culture to Hualien. Since opening, we have always insisted on quality and service, serving every guest with heart." data-zh="Wave 咖啡創立於花蓮，源自對咖啡的熱愛與對這片土地的深情。創辦人在環遊世界品嚐各地咖啡後，決定回到家鄉花蓮，將世界級的咖啡體驗帶給在地居民與旅客。我們的名字「Wave」象徵著太平洋的海浪，也代表著我們希望為花蓮帶來一股新的咖啡浪潮。從開店至今，我們始終堅持品質與服務，用心對待每一位客人。">Wave 咖啡創立於花蓮，源自對咖啡的熱愛與對這片土地的深情。創辦人在環遊世界品嚐各地咖啡後，決定回到家鄉花蓮，將世界級的咖啡體驗帶給在地居民與旅客。我們的名字「Wave」象徵著太平洋的海浪，也代表著我們希望為花蓮帶來一股新的咖啡浪潮。從開店至今，我們始終堅持品質與服務，用心對待每一位客人。
                                         </p>
                                     </div>
                                     <div class="col-md-4 hidden-xs">
@@ -521,13 +540,13 @@
                         <div class="col-md-12">
                             <div class="about-us-box contact-us-box">
                                 <div class="about-us-heading josefin">
-                                    <h2>聯絡我們</h2>
+                                    <h2 data-en="Contact Us" data-zh="聯絡我們">聯絡我們</h2>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="contact-us-address raleway">
-                                            <h2 class="josefin">地址</h2>
-                                            <p><b><i class="fas fa-map-signs"></i></b> 花蓮縣花蓮市中正路123號</p>
+                                            <h2 class="josefin" data-en="Address" data-zh="地址">地址</h2>
+                                            <p><b><i class="fas fa-map-signs"></i></b> <span data-en="No. 123, Zhongzheng Rd., Hualien City, Hualien County" data-zh="花蓮縣花蓮市中正路123號">花蓮縣花蓮市中正路123號</span></p>
                                             <p>
                                                 <bold><i class="far fa-phone-volume"></i></bold> 03-831-2345
                                             </p>
@@ -543,7 +562,7 @@
                             </div>
                             <div class="about-us-box email-box">
                                 <div class="about-us-heading josefin">
-                                    <h2>寫信給我們</h2>
+                                    <h2 data-en="Write to Us" data-zh="寫信給我們">寫信給我們</h2>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
@@ -553,17 +572,17 @@
                                     </div>
                                     <div class="col-md-8 raleway">
                                         <form>
-                                            <label for="fname">姓名</label>
-                                            <input type="text" id="fname" name="firstname" placeholder="請輸入姓名">
+                                            <label for="fname" data-en="Name" data-zh="姓名">姓名</label>
+                                            <input type="text" id="fname" name="firstname" data-ph-en="Enter your name" data-ph-zh="請輸入姓名" placeholder="請輸入姓名">
 
-                                            <label for="lname">電子郵件</label>
-                                            <input type="text" id="lname" name="lastname" placeholder="請輸入電子郵件">
+                                            <label for="lname" data-en="Email" data-zh="電子郵件">電子郵件</label>
+                                            <input type="text" id="lname" name="lastname" data-ph-en="Enter your email" data-ph-zh="請輸入電子郵件" placeholder="請輸入電子郵件">
 
-                                            <label for="subject">訊息</label>
-                                            <textarea id="subject" name="subject" placeholder="請輸入訊息內容..."
+                                            <label for="subject" data-en="Message" data-zh="訊息">訊息</label>
+                                            <textarea id="subject" name="subject" data-ph-en="Enter your message..." data-ph-zh="請輸入訊息內容..." placeholder="請輸入訊息內容..."
                                                 style="height:200px"></textarea>
 
-                                            <input type="submit" value="送出">
+                                            <input type="submit" data-val-en="Submit" data-val-zh="送出" value="送出">
                                         </form>
                                     </div>
                                 </div>
@@ -624,6 +643,67 @@
             });
 
         });
+    </script>
+
+    <!-- Language Toggle Script -->
+    <script>
+        (function () {
+            var currentLang = localStorage.getItem('wave-lang') || 'zh';
+
+            function applyLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('wave-lang', lang);
+
+                // Update html lang attribute
+                document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+
+                // Update page title
+                var titleEl = document.querySelector('title[data-' + lang + ']');
+                if (titleEl) {
+                    document.title = titleEl.getAttribute('data-' + lang);
+                }
+
+                // Update all elements with data-en and data-zh
+                var elements = document.querySelectorAll('[data-en][data-zh]');
+                elements.forEach(function (el) {
+                    // Skip title element (handled above) and inputs
+                    if (el.tagName === 'TITLE') return;
+                    el.textContent = el.getAttribute('data-' + lang);
+                });
+
+                // Update img alt attributes
+                var imgs = document.querySelectorAll('[data-alt-en][data-alt-zh]');
+                imgs.forEach(function (img) {
+                    img.alt = img.getAttribute('data-alt-' + lang);
+                });
+
+                // Update placeholders
+                var phElements = document.querySelectorAll('[data-ph-en][data-ph-zh]');
+                phElements.forEach(function (el) {
+                    el.placeholder = el.getAttribute('data-ph-' + lang);
+                });
+
+                // Update submit button values
+                var valElements = document.querySelectorAll('[data-val-en][data-val-zh]');
+                valElements.forEach(function (el) {
+                    el.value = el.getAttribute('data-val-' + lang);
+                });
+
+                // Update toggle button text
+                var toggleBtn = document.querySelector('#lang-toggle span');
+                if (toggleBtn) {
+                    toggleBtn.textContent = lang === 'zh' ? 'English' : '中文';
+                }
+            }
+
+            // Apply saved language on load
+            applyLanguage(currentLang);
+
+            // Toggle button click
+            document.getElementById('lang-toggle').addEventListener('click', function () {
+                applyLanguage(currentLang === 'zh' ? 'en' : 'zh');
+            });
+        })();
     </script>
 </body>
 

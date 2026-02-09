@@ -403,3 +403,23 @@ input[type=submit]:hover {
         margin-bottom: 30px;
     }
 }
+
+/* Language toggle button */
+.lang-toggle {
+    margin-top: 25px;
+    background-color: rgba(0, 153, 153, .9);
+    color: #fff !important;
+    font-weight: bold;
+    border: 2px solid #099;
+}
+
+.lang-toggle:hover {
+    background-color: #fff;
+    color: #099 !important;
+    border-color: #099;
+}
+
+.lang-toggle:focus {
+    background-color: rgba(0, 153, 153, .9);
+    color: #fff !important;
+}
