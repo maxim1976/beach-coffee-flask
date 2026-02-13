@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ 'Edit' if item else 'Add' }} Special - ChillChill Cafe Admin</title>
+    <title>{{ 'Edit' if item else 'Add' }} Special - Chilling Hualien Cafe Admin</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style>
         body { background: #1a1a2e; color: #eee; padding-top: 20px; }
@@ -20,7 +20,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{{ url_for('admin.dashboard') }}">ChillChill Cafe Admin</a>
+                <a class="navbar-brand" href="{{ url_for('admin.dashboard') }}">Chilling Hualien Cafe Admin</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ url_for('admin.specials_list') }}">Back to List</a></li>

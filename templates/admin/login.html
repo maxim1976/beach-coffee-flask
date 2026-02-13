@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - ChillChill Cafe</title>
+    <title>Admin Login - Chilling Hualien Cafe</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <style>
         body { background: #1a1a2e; color: #eee; }
@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="login-box">
-        <h2>ChillChill Cafe Admin</h2>
+        <h2>Chilling Hualien Cafe Admin</h2>
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% for category, message in messages %}
         <div class="alert alert-{{ category }}">{{ message }}</div>
