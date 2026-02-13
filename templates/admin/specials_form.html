@@ -40,6 +40,10 @@
                 <input type="text" class="form-control" name="name_en" value="{{ item.name_en if item else '' }}" required>
             </div>
             <div class="form-group">
+                <label>Price (NT$)</label>
+                <input type="number" class="form-control" name="price" value="{{ item.price if item and item.price else '' }}" placeholder="Leave empty if no fixed price">
+            </div>
+            <div class="form-group">
                 <label>Description (ZH)</label>
                 <textarea class="form-control" name="description_zh" rows="3" required>{{ item.description_zh if item else '' }}</textarea>
             </div>

@@ -23,6 +23,7 @@ class SpecialItem(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name_zh = db.Column(db.String(100), nullable=False)
     name_en = db.Column(db.String(100), nullable=False)
+    price = db.Column(db.Integer, nullable=True)
     description_zh = db.Column(db.String(500), nullable=False)
     description_en = db.Column(db.String(500), nullable=False)
     image_path = db.Column(db.String(200), nullable=False)

@@ -184,6 +184,9 @@
                                 </div>
                                 <div class="special-item-desc">
                                     <h2 class="josefin" data-en="{{ item.name_en }}" data-zh="{{ item.name_zh }}">{{ item.name_zh }}</h2>
+                                    {% if item.price %}
+                                    <p class="special-price josefin">NT${{ item.price }}</p>
+                                    {% endif %}
                                     <p class="raleway" data-en="{{ item.description_en }}" data-zh="{{ item.description_zh }}">{{ item.description_zh }}</p>
                                 </div>
                             </div>

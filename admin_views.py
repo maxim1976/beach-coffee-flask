@@ -114,6 +114,7 @@ def specials_add():
         item = SpecialItem(
             name_zh=request.form['name_zh'],
             name_en=request.form['name_en'],
+            price=int(request.form['price']) if request.form.get('price') else None,
             description_zh=request.form['description_zh'],
             description_en=request.form['description_en'],
             image_path=request.form['image_path'],
@@ -134,6 +135,7 @@ def specials_edit(item_id):
     if request.method == 'POST':
         item.name_zh = request.form['name_zh']
         item.name_en = request.form['name_en']
+        item.price = int(request.form['price']) if request.form.get('price') else None
         item.description_zh = request.form['description_zh']
         item.description_en = request.form['description_en']
         item.image_path = request.form['image_path']
