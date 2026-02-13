@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Wave Coffee</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <style>
+        body { background: #1a1a2e; color: #eee; padding-top: 20px; }
+        .panel { background: #16213e; border: 1px solid #0f3460; }
+        .panel-heading { background: #0f3460 !important; color: #eee; }
+        a.list-group-item { background: #16213e; color: #e94560; border-color: #0f3460; }
+        a.list-group-item:hover { background: #0f3460; color: #fff; }
+        .navbar { background: #0f3460; border: none; margin-bottom: 30px; }
+        .navbar a { color: #eee !important; }
+        .navbar a:hover { color: #e94560 !important; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('admin.dashboard') }}">Wave Coffee Admin</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ url_for('index') }}">View Site</a></li>
+                <li><a href="{{ url_for('admin.logout') }}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %}
+        {% endwith %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel">
+                    <div class="panel-heading"><h3 class="panel-title">Menu Items</h3></div>
+                    <div class="list-group">
+                        <a href="{{ url_for('admin.menu_list') }}" class="list-group-item">View / Edit Menu Items</a>
+                        <a href="{{ url_for('admin.menu_add') }}" class="list-group-item">Add New Menu Item</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel">
+                    <div class="panel-heading"><h3 class="panel-title">Specials</h3></div>
+                    <div class="list-group">
+                        <a href="{{ url_for('admin.specials_list') }}" class="list-group-item">View / Edit Specials</a>
+                        <a href="{{ url_for('admin.specials_add') }}" class="list-group-item">Add New Special</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

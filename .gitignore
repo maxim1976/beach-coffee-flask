@@ -1,1 +1,5 @@
-task.tex
+wave_cafe.db
+__pycache__/
+*.pyc
+.env
+tmpclaude-*

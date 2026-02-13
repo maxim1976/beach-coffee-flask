@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Chill Coffee" data-zh="花莲 咖啡">Wave 咖啡</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/fav.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-xs-12 menu-box josefin margin-bottom">
+                <div class="left-bar full-height">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="logo-box">
+                                <img src="assets/images/logo2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a id="home-button" class="menu" href="#home"><i class="fal fa-mug-marshmallows"></i>
+                                <span data-en="Menu" data-zh="飲品菜單">飲品菜單</span></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a id="special-button" class="menu" href="#special-item"><i class="fad fa-sparkles"></i>
+                                <span data-en="Specials" data-zh="特色推薦">特色推薦</span></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a id="about-button" class="menu" href="#about-us"><i class="fal fa-user-friends"></i>
+                                <span data-en="About Us" data-zh="關於我們">關於我們</span></a>
+                        </div>
+                        <div class="col-md-6">
+                            <a id="contact-button" class="menu" href="#contact-us"><i class="fal fa-house-user"></i>
+                                <span data-en="Contact" data-zh="聯絡我們">聯絡我們</span></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a id="lang-toggle" class="menu lang-toggle" href="javascript:void(0)">
+                                <i class="fal fa-globe"></i> <span>English</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col-md-12 hidden-xs hidden-sm">
+                                <div class="footer-text josefin">
+                                    <p><span data-en="ChillChill Coffee" data-zh="花莲 咖啡">Wave 咖啡</span> &#169;<span id="currentYear"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-2 col-xs-12">
+                <div style="overflow-x: hidden;" id="home" class="content-box full-height example">
+                    <div class="tab-buttons margin-bottom">
+                        <ul class="nav nav-tabs nav-justified josefin">
+                            <li class="active"><a data-toggle="tab" href="#iced-coffee"><span data-en="Iced Coffee" data-zh="冰咖啡">冰咖啡</span></a></li>
+                            <li><a data-toggle="tab" href="#menu1"><span data-en="Hot Coffee" data-zh="熱咖啡">熱咖啡</span></a></li>
+                            <li><a data-toggle="tab" href="#menu2"><span data-en="Juice" data-zh="果汁">果汁</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+                        <div id="iced-coffee" class="tab-pane fade in active">
+                            {% for item in iced_coffee %}
+                            <div class="coffee-menu-single josefin">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="menu-img">
+                                            <img src="assets/images/{{ item.image_path }}" data-alt-en="{{ item.name_en }}" data-alt-zh="{{ item.name_zh }}" alt="{{ item.name_zh }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-sm-6 col-xs-12">
+                                        <div class="menu-description">
+                                            <div class="menu-heading-price josefin">
+                                                <div class="menu-heading">
+                                                    <h2 class="font-18" data-en="{{ item.name_en }}" data-zh="{{ item.name_zh }}">{{ item.name_zh }}</h2>
+                                                </div>
+                                                <div class="menu-price">
+                                                    <h2>NT${{ item.price }}</h2>
+                                                </div>
+                                            </div>
+                                            <div class="menu-text raleway">
+                                                <p data-en="{{ item.description_en }}" data-zh="{{ item.description_zh }}">{{ item.description_zh }}</p>
+                                            </div>
+                                            <div class="order-button josefin">
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div id="menu1" class="tab-pane fade">
+                            {% for item in hot_coffee %}
+                            <div class="coffee-menu-single josefin">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="menu-img">
+                                            <img src="assets/images/{{ item.image_path }}" data-alt-en="{{ item.name_en }}" data-alt-zh="{{ item.name_zh }}" alt="{{ item.name_zh }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-sm-6 col-xs-12">
+                                        <div class="menu-description">
+                                            <div class="menu-heading-price josefin">
+                                                <div class="menu-heading">
+                                                    <h2 class="font-18" data-en="{{ item.name_en }}" data-zh="{{ item.name_zh }}">{{ item.name_zh }}</h2>
+                                                </div>
+                                                <div class="menu-price">
+                                                    <h2>NT${{ item.price }}</h2>
+                                                </div>
+                                            </div>
+                                            <div class="menu-text raleway">
+                                                <p data-en="{{ item.description_en }}" data-zh="{{ item.description_zh }}">{{ item.description_zh }}</p>
+                                            </div>
+                                            <div class="order-button josefin">
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            {% for item in juice %}
+                            <div class="coffee-menu-single josefin">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="menu-img">
+                                            <img src="assets/images/{{ item.image_path }}" data-alt-en="{{ item.name_en }}" data-alt-zh="{{ item.name_zh }}" alt="{{ item.name_zh }}">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-sm-6 col-xs-12">
+                                        <div class="menu-description">
+                                            <div class="menu-heading-price josefin">
+                                                <div class="menu-heading">
+                                                    <h2 class="font-18" data-en="{{ item.name_en }}" data-zh="{{ item.name_zh }}">{{ item.name_zh }}</h2>
+                                                </div>
+                                                <div class="menu-price">
+                                                    <h2>NT${{ item.price }}</h2>
+                                                </div>
+                                            </div>
+                                            <div class="menu-text raleway">
+                                                <p data-en="{{ item.description_en }}" data-zh="{{ item.description_zh }}">{{ item.description_zh }}</p>
+                                            </div>
+                                            <div class="order-button josefin">
+                                                <a href="#"><i class="far fa-arrows-alt fa-spin"></i> <span data-en="Order Now" data-zh="立即點餐">立即點餐</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none;" id="special-item" class="content-box full-height example">
+                    {% for i in range(0, specials|length, 2) %}
+                    <div class="row">
+                        {% for item in specials[i:i+2] %}
+                        <div class="col-md-6">
+                            <div class="special-item-single">
+                                <div class="special-item-image">
+                                    <img src="assets/images/{{ item.image_path }}" data-alt-en="{{ item.name_en }}" data-alt-zh="{{ item.name_zh }}" alt="{{ item.name_zh }}">
+                                </div>
+                                <div class="special-item-desc">
+                                    <h2 class="josefin" data-en="{{ item.name_en }}" data-zh="{{ item.name_zh }}">{{ item.name_zh }}</h2>
+                                    <p class="raleway" data-en="{{ item.description_en }}" data-zh="{{ item.description_zh }}">{{ item.description_zh }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
+                <div style="display: none;" id="about-us" class="content-box full-height example">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="about-us-box">
+                                <div class="about-us-heading josefin">
+                                    <h2 data-en="About Wave Coffee" data-zh="關於 Wave 咖啡">關於 Wave 咖啡</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="about-us-img">
+                                            <img src="assets/images/about-1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 raleway">
+                                        <p data-en="Wave Coffee is located in the heart of Hualien City, a cozy cafe specializing in specialty coffee. We insist on selecting premium coffee beans, with professional baristas hand-brewing every cup for you. Our space is comfortable and serene — the perfect place to relax and enjoy your coffee time. Whether meeting with friends, reading alone, or needing a quiet workspace, Wave Coffee welcomes you." data-zh="Wave 咖啡位於花蓮市中心，是一間以精品咖啡為主的溫馨咖啡廳。我們堅持選用優質咖啡豆，由專業咖啡師為您手工沖泡每一杯。店內空間舒適寧靜，是您放鬆身心、享受咖啡時光的最佳去處。無論是與朋友聚會、獨自閱讀，還是需要一個安靜的工作空間，Wave 咖啡都歡迎您的到來。">Wave 咖啡位於花蓮市中心，是一間以精品咖啡為主的溫馨咖啡廳。我們堅持選用優質咖啡豆，由專業咖啡師為您手工沖泡每一杯。店內空間舒適寧靜，是您放鬆身心、享受咖啡時光的最佳去處。無論是與朋友聚會、獨自閱讀，還是需要一個安靜的工作空間，Wave 咖啡都歡迎您的到來。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-us-box">
+                                <div class="about-us-heading josefin">
+                                    <h2 data-en="Our Story" data-zh="我們的故事">我們的故事</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 visible-xs-block">
+                                        <div class="about-us-img">
+                                            <img src="assets/images/about-2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 raleway">
+                                        <p data-en="Wave Coffee was founded in Hualien, born from a love of coffee and a deep connection to this land. After traveling the world tasting coffee from every corner, our founder decided to return home to Hualien and bring a world-class coffee experience to local residents and travelers. Our name 'Wave' symbolizes the Pacific Ocean waves, and represents our hope to bring a new wave of coffee culture to Hualien. Since opening, we have always insisted on quality and service, serving every guest with heart." data-zh="Wave 咖啡創立於花蓮，源自對咖啡的熱愛與對這片土地的深情。創辦人在環遊世界品嚐各地咖啡後，決定回到家鄉花蓮，將世界級的咖啡體驗帶給在地居民與旅客。我們的名字「Wave」象徵著太平洋的海浪，也代表著我們希望為花蓮帶來一股新的咖啡浪潮。從開店至今，我們始終堅持品質與服務，用心對待每一位客人。">Wave 咖啡創立於花蓮，源自對咖啡的熱愛與對這片土地的深情。創辦人在環遊世界品嚐各地咖啡後，決定回到家鄉花蓮，將世界級的咖啡體驗帶給在地居民與旅客。我們的名字「Wave」象徵著太平洋的海浪，也代表著我們希望為花蓮帶來一股新的咖啡浪潮。從開店至今，我們始終堅持品質與服務，用心對待每一位客人。
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 hidden-xs">
+                                        <div class="about-us-img">
+                                            <img src="assets/images/about-2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none;" id="contact-us" class="content-box full-height example">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="about-us-box contact-us-box">
+                                <div class="about-us-heading josefin">
+                                    <h2 data-en="Contact Us" data-zh="聯絡我們">聯絡我們</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="contact-us-address raleway">
+                                            <h2 class="josefin" data-en="Address" data-zh="地址">地址</h2>
+                                            <p><b><i class="fas fa-map-signs"></i></b> <span data-en="No. 123, Zhongzheng Rd., Hualien City, Hualien County" data-zh="花蓮縣花蓮市中正路123號">花蓮縣花蓮市中正路123號</span></p>
+                                            <p>
+                                                <bold><i class="far fa-phone-volume"></i></bold> 03-831-2345
+                                            </p>
+                                            <p>
+                                                <bold><i class="fas fa-at"></i></bold> hello@wavecafe.tw
+                                            </p>
+                                            <p>
+                                                <bold><i class="fab fa-line"></i></bold> @wavecafe
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-us-box email-box">
+                                <div class="about-us-heading josefin">
+                                    <h2 data-en="Write to Us" data-zh="寫信給我們">寫信給我們</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="about-us-img">
+                                            <img src="assets/images/email.avif" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 raleway">
+                                        <form>
+                                            <label for="fname" data-en="Name" data-zh="姓名">姓名</label>
+                                            <input type="text" id="fname" name="firstname" data-ph-en="Enter your name" data-ph-zh="請輸入姓名" placeholder="請輸入姓名">
+
+                                            <label for="lname" data-en="Email" data-zh="電子郵件">電子郵件</label>
+                                            <input type="text" id="lname" name="lastname" data-ph-en="Enter your email" data-ph-zh="請輸入電子郵件" placeholder="請輸入電子郵件">
+
+                                            <label for="subject" data-en="Message" data-zh="訊息">訊息</label>
+                                            <textarea id="subject" name="subject" data-ph-en="Enter your message..." data-ph-zh="請輸入訊息內容..." placeholder="請輸入訊息內容..."
+                                                style="height:200px"></textarea>
+
+                                            <input type="submit" data-val-en="Submit" data-val-zh="送出" value="送出">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.vide.js"></script>
+    <script>
+        var year = new Date().getFullYear();
+        document.getElementById("currentYear").innerHTML = year;
+    </script>
+    <script>
+        $('body').vide('assets/video/01.mp4', {
+            className: 'video-position'
+        });
+        $('#myBlock').vide('extended path as a string', 'options as a string');
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#home-button').on('click', function () {
+                $('#contact-us').hide();
+                $('#about-us').hide();
+                $('#special-item').hide();
+
+                $('#home').show();
+            });
+
+            $('#special-button').on('click', function () {
+                $('#home').hide();
+                $('#contact-us').hide();
+                $('#about-us').hide();
+
+                $('#special-item').show();
+            });
+
+            $('#about-button').on('click', function () {
+                $('#home').hide();
+                $('#contact-us').hide();
+                $('#special-item').hide();
+
+                $('#about-us').show();
+            });
+
+            $('#contact-button').on('click', function () {
+                $('#home').hide();
+                $('#special-item').hide();
+                $('#about-us').hide();
+
+                $('#contact-us').show();
+            });
+
+        });
+    </script>
+
+    <!-- Language Toggle Script -->
+    <script>
+        (function () {
+            var currentLang = localStorage.getItem('wave-lang') || 'zh';
+
+            function applyLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('wave-lang', lang);
+
+                // Update html lang attribute
+                document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+
+                // Update page title
+                var titleEl = document.querySelector('title[data-' + lang + ']');
+                if (titleEl) {
+                    document.title = titleEl.getAttribute('data-' + lang);
+                }
+
+                // Update all elements with data-en and data-zh
+                var elements = document.querySelectorAll('[data-en][data-zh]');
+                elements.forEach(function (el) {
+                    // Skip title element (handled above) and inputs
+                    if (el.tagName === 'TITLE') return;
+                    el.textContent = el.getAttribute('data-' + lang);
+                });
+
+                // Update img alt attributes
+                var imgs = document.querySelectorAll('[data-alt-en][data-alt-zh]');
+                imgs.forEach(function (img) {
+                    img.alt = img.getAttribute('data-alt-' + lang);
+                });
+
+                // Update placeholders
+                var phElements = document.querySelectorAll('[data-ph-en][data-ph-zh]');
+                phElements.forEach(function (el) {
+                    el.placeholder = el.getAttribute('data-ph-' + lang);
+                });
+
+                // Update submit button values
+                var valElements = document.querySelectorAll('[data-val-en][data-val-zh]');
+                valElements.forEach(function (el) {
+                    el.value = el.getAttribute('data-val-' + lang);
+                });
+
+                // Update toggle button text
+                var toggleBtn = document.querySelector('#lang-toggle span');
+                if (toggleBtn) {
+                    toggleBtn.textContent = lang === 'zh' ? 'English' : '中文';
+                }
+            }
+
+            // Apply saved language on load
+            applyLanguage(currentLang);
+
+            // Toggle button click
+            document.getElementById('lang-toggle').addEventListener('click', function () {
+                applyLanguage(currentLang === 'zh' ? 'en' : 'zh');
+            });
+        })();
+    </script>
+</body>
+
+</html>

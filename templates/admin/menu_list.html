@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Items - Wave Coffee Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <style>
+        body { background: #1a1a2e; color: #eee; padding-top: 20px; }
+        .table { color: #eee; }
+        .table > thead > tr > th { border-color: #0f3460; }
+        .table > tbody > tr > td { border-color: #0f3460; }
+        .btn-danger { background: #e94560; border-color: #e94560; }
+        .btn-warning { background: #e9a045; border-color: #e9a045; }
+        .navbar { background: #0f3460; border: none; margin-bottom: 30px; }
+        .navbar a { color: #eee !important; }
+        .navbar a:hover { color: #e94560 !important; }
+        .badge-inactive { background: #888; }
+        .category-label { text-transform: capitalize; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('admin.dashboard') }}">Wave Coffee Admin</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ url_for('index') }}">View Site</a></li>
+                <li><a href="{{ url_for('admin.logout') }}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+        {% endfor %}
+        {% endwith %}
+        <h2>Menu Items <a href="{{ url_for('admin.menu_add') }}" class="btn btn-sm btn-success">+ Add</a></h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Category</th>
+                    <th>Name (ZH)</th>
+                    <th>Name (EN)</th>
+                    <th>Price</th>
+                    <th>Order</th>
+                    <th>Active</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td><span class="category-label">{{ item.category.replace('_', ' ') }}</span></td>
+                    <td>{{ item.name_zh }}</td>
+                    <td>{{ item.name_en }}</td>
+                    <td>NT${{ item.price }}</td>
+                    <td>{{ item.display_order }}</td>
+                    <td>{{ '&#10003;' if item.is_active else '&#10007;' }}</td>
+                    <td>
+                        <a href="{{ url_for('admin.menu_edit', item_id=item.id) }}" class="btn btn-xs btn-warning">Edit</a>
+                        <form method="POST" action="{{ url_for('admin.menu_delete', item_id=item.id) }}" style="display:inline" onsubmit="return confirm('Delete this item?')">
+                            <button type="submit" class="btn btn-xs btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

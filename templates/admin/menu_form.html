@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ 'Edit' if item else 'Add' }} Menu Item - Wave Coffee Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <style>
+        body { background: #1a1a2e; color: #eee; padding-top: 20px; }
+        .form-control { background: #16213e; color: #eee; border-color: #0f3460; }
+        .form-control:focus { background: #16213e; color: #eee; border-color: #e94560; }
+        .btn-primary { background: #e94560; border-color: #e94560; }
+        .btn-primary:hover { background: #c73a52; border-color: #c73a52; }
+        .navbar { background: #0f3460; border: none; margin-bottom: 30px; }
+        .navbar a { color: #eee !important; }
+        .navbar a:hover { color: #e94560 !important; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ url_for('admin.dashboard') }}">Wave Coffee Admin</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ url_for('admin.menu_list') }}">Back to List</a></li>
+                <li><a href="{{ url_for('admin.logout') }}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>{{ 'Edit' if item else 'Add' }} Menu Item</h2>
+        <form method="POST" class="col-md-8">
+            <div class="form-group">
+                <label>Category</label>
+                <select class="form-control" name="category" required>
+                    <option value="iced_coffee" {{ 'selected' if item and item.category == 'iced_coffee' }}>Iced Coffee</option>
+                    <option value="hot_coffee" {{ 'selected' if item and item.category == 'hot_coffee' }}>Hot Coffee</option>
+                    <option value="juice" {{ 'selected' if item and item.category == 'juice' }}>Juice</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Name (ZH)</label>
+                <input type="text" class="form-control" name="name_zh" value="{{ item.name_zh if item else '' }}" required>
+            </div>
+            <div class="form-group">
+                <label>Name (EN)</label>
+                <input type="text" class="form-control" name="name_en" value="{{ item.name_en if item else '' }}" required>
+            </div>
+            <div class="form-group">
+                <label>Price (NT$)</label>
+                <input type="number" class="form-control" name="price" value="{{ item.price if item else '' }}" required>
+            </div>
+            <div class="form-group">
+                <label>Description (ZH)</label>
+                <textarea class="form-control" name="description_zh" rows="2" required>{{ item.description_zh if item else '' }}</textarea>
+            </div>
+            <div class="form-group">
+                <label>Description (EN)</label>
+                <textarea class="form-control" name="description_en" rows="2" required>{{ item.description_en if item else '' }}</textarea>
+            </div>
+            <div class="form-group">
+                <label>Image filename (in assets/images/)</label>
+                <input type="text" class="form-control" name="image_path" value="{{ item.image_path if item else '' }}" required placeholder="e.g. iced-americano.png">
+            </div>
+            <div class="form-group">
+                <label>Display Order</label>
+                <input type="number" class="form-control" name="display_order" value="{{ item.display_order if item else 0 }}">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="is_active" {{ 'checked' if not item or item.is_active }}> Active
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">{{ 'Update' if item else 'Add' }}</button>
+            <a href="{{ url_for('admin.menu_list') }}" class="btn btn-default">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>
