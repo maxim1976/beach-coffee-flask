@@ -96,7 +96,13 @@ def seed():
             print(f'Seeded {len(MENU_ITEMS)} menu items.')
 
         if SpecialItem.query.first():
-            print('Special items already exist, skipping seed.')
+            # Re-seed specials to update prices
+            SpecialItem.query.delete()
+            db.session.commit()
+            for data in SPECIAL_ITEMS:
+                db.session.add(SpecialItem(**data))
+            db.session.commit()
+            print(f'Re-seeded {len(SPECIAL_ITEMS)} special items with prices.')
         else:
             for data in SPECIAL_ITEMS:
                 db.session.add(SpecialItem(**data))
