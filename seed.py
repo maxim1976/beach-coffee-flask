@@ -87,6 +87,15 @@ SPECIAL_ITEMS = [
 
 def seed():
     with app.app_context():
+        # Add price column if it doesn't exist (for existing PostgreSQL databases)
+        from sqlalchemy import text, inspect
+        inspector = inspect(db.engine)
+        columns = [col['name'] for col in inspector.get_columns('special_item')]
+        if 'price' not in columns:
+            db.session.execute(text('ALTER TABLE special_item ADD COLUMN price INTEGER'))
+            db.session.commit()
+            print('Added price column to special_item table.')
+
         if MenuItem.query.first():
             print('Menu items already exist, skipping seed.')
         else:
