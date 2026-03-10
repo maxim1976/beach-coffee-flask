@@ -634,7 +634,7 @@ MOBILE: Revert to original solid styles
 
     /* Beach photo background + glass effect on mobile */
     body {
-        background-image: url('https://images.unsplash.com/photo-1505413687799-90481dfc0203?q=80&w=2070&auto=format&fit=crop');
+        background-image: url('../images/beach-bg.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: scroll;
